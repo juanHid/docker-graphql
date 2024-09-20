@@ -71,24 +71,3 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](LICENSE).
-
-# Github actions
-
-# Temas puntuales de la sección
-
-En esta sección aprenderemos a automatizar el proceso de construcción, despliegue y versionamiento de nuestras imágenes.
-
-## Github actions
-
-Crearemos un pipeline:
-Con un solo commit a github mediante github actions será posible crear la imagen y subirla a docker hub
-
-## Github Semantic Versioning
-
-## Automatic build
-
-## Automatic push
-
-## Mensajes de commit para disparar versiones
-
-## Despliegues automáticos a registros privados
