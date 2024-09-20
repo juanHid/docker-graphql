@@ -25,7 +25,9 @@ jobs:
         echo "Iniciando login"
         docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PASSWORD
     - name: Build docker image
-      run: docker build -t "$DOCKERHUB_USER/docker-graphql:0.0.2" .
+      env:
+        DOCKERHUB_USER: ${{secrets.DOCKERHUB_USER}}
+      run: docker build -t $DOCKERHUB_USER/docker-graphql:0.0.2 .
 
 
 
