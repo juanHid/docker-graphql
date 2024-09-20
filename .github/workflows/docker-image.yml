@@ -36,7 +36,7 @@ jobs:
       run: |
         echo "Iniciando login"
         docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PASSWORD
-        echo "New version: $NEW_VERSION"
+        echo ${{steps.version.output.version}}
 
         
     # - name: Build docker image
