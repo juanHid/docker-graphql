@@ -24,14 +24,14 @@ jobs:
         major_pattern: "major:"
         minor_pattern: "minor:"
         format: "${major}.${minor}.${patch}-prerelease${increment}"
-      id: version_step
+      id: version
         
             
     - name: Docker login
       env:
         DOCKERHUB_USER: ${{secrets.DOCKERHUB_USER}}
         DOCKERHUB_PASSWORD: ${{secrets.DOCKERHUB_PASSWORD}}
-        NEW_VERSION: ${{ steps.version_step.output.version }}
+        NEW_VERSION: ${{ steps.version.output.version }}
       run: |
         echo "Iniciando login"
         docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PASSWORD
